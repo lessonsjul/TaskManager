@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>ToDo List</display-name>
+    <description>
+        This is a simple web application with a source code organization
+        based on the recommendations of the Application Developer's Guide.
+    </description>
+
+    <servlet>
+        <servlet-name>TaskView</servlet-name>
+        <servlet-class>edu.bycheva.ToDo.servlets.ToDoViewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TaskView</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TaskCreate</servlet-name>
+        <servlet-class>edu.bycheva.ToDo.servlets.TaskCreateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TaskCreate</servlet-name>
+        <url-pattern>/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TaskEdit</servlet-name>
+        <servlet-class>edu.bycheva.ToDo.servlets.TaskEditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TaskEdit</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TaskDelete</servlet-name>
+        <servlet-class>edu.bycheva.ToDo.servlets.TaskDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TaskDelete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+</web-app>
